@@ -35,7 +35,7 @@ class AdminController extends Controller
             $query->whereDate('created_at', $request->date);
         }
 
-        $contacts = $query->latest()->paginate(10);
+        $contacts = $query->latest()->paginate(7);
 
         $categories = Category::all();
         $tags = Tag::all();
